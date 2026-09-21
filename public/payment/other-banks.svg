@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" role="img" aria-labelledby="title">
+  <title>Other bank transfer</title>
+  <rect width="240" height="80" rx="18" fill="#2d2724"/>
+  <circle cx="40" cy="40" r="22" fill="#f2e5d9"/>
+  <path d="m31 43 7-7 5 5 8-10 4 4-12 15-5-5-3 3z" fill="#2d2724"/>
+  <text x="73" y="46" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">Other banks</text>
+  <text x="73" y="62" fill="#e8d8cb" font-family="Arial,sans-serif" font-size="11">BANK TRANSFER</text>
+</svg>

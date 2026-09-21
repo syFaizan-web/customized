@@ -19,10 +19,10 @@ const benefits = [
 ];
 
 const paymentMethods = [
-  { name: "easypaisa", detail: "Mobile wallet", mark: "e", color: "bg-[#47b649] text-white" },
-  { name: "JazzCash", detail: "Mobile wallet", mark: "J", color: "bg-[#ed1c24] text-white" },
-  { name: "Meezan Bank", detail: "Bank transfer", mark: "M", color: "bg-[#087f42] text-white" },
-  { name: "Other banks", detail: "Direct transfer", mark: "↗", color: "bg-[#2d2724] text-white" },
+  { name: "easypaisa", detail: "Mobile wallet", logo: "/payment/easypaisa.png" },
+  { name: "JazzCash", detail: "Mobile wallet", logo: "/payment/jazzcash.png" },
+  { name: "Meezan Bank", detail: "Bank transfer", logo: "/payment/meezan-bank.png" },
+  { name: "Other banks", detail: "Direct transfer", logo: "/payment/other-banks.svg" },
 ];
 
 const galleryImages = [
@@ -140,8 +140,8 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                   {paymentMethods.map((method) => (
                     <div key={method.name} className="rounded-[20px] border border-[#eadcc7] bg-white p-3 text-center transition hover:-translate-y-1 hover:shadow-[0_10px_24px_rgba(89,68,55,0.08)]">
-                      <div className={`mx-auto flex h-12 w-12 items-center justify-center rounded-2xl text-2xl font-bold shadow-sm ${method.color}`}>
-                        {method.mark}
+                      <div className="flex h-16 items-center justify-center rounded-xl bg-[#faf8f5] px-2">
+                        <img src={method.logo} alt={`${method.name} logo`} className="h-full w-full object-contain" />
                       </div>
                       <p className="mt-3 text-sm font-semibold text-[#2d2724]">{method.name}</p>
                       <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-[#88756c]">{method.detail}</p>

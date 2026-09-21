@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" role="img" aria-labelledby="title">
+  <title>Meezan Bank</title>
+  <rect width="240" height="80" rx="18" fill="#087f42"/>
+  <circle cx="40" cy="40" r="22" fill="#fff"/>
+  <path d="M28 49h24v5H28zm3-5 9-15 9 15h-6l-3-6-3 6z" fill="#087f42"/>
+  <text x="73" y="46" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">Meezan</text>
+  <text x="73" y="62" fill="#d7f1df" font-family="Arial,sans-serif" font-size="11">ISLAMIC BANK</text>
+</svg>

@@ -39,22 +39,28 @@ export function HeroSection() {
           >
             <div className="grid w-full max-w-xl gap-4 sm:grid-cols-2">
               <div className="overflow-hidden rounded-[28px] border border-[#ead8c5] bg-[#fffaf6] p-3 shadow-[0_25px_60px_rgba(92,71,59,0.06)] sm:col-span-2">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
-                  alt="Handmade personalized piece"
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  poster="/hero/hero-main.jpg"
+                  aria-label="Handmade personalized pieces"
                   className="h-56 w-full rounded-[20px] object-cover sm:h-64 lg:h-[300px]"
-                />
+                >
+                  <source src="/hero/hero-vid.mp4" type="video/mp4" />
+                </video>
               </div>
               <div className="hidden overflow-hidden rounded-[24px] border border-[#ead8c5] bg-[#fffaf6] p-3 lg:block">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80"
+                  src="/hero/hero-frame.jpg"
                   alt="Custom frame"
                   className="h-[210px] w-full rounded-[18px] object-cover"
                 />
               </div>
               <div className="hidden overflow-hidden rounded-[24px] border border-[#ead8c5] bg-[#fffaf6] p-3 lg:block">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80"
+                  src="/hero/hero-earrings.jpg"
                   alt="Handmade earrings"
                   className="h-[210px] w-full rounded-[18px] object-cover"
                 />
