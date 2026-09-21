@@ -58,7 +58,7 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="flex items-center justify-between gap-3 border-t border-[#eee1d4] pt-4">
           <div className="min-w-0">
             <p className="text-[9px] font-medium uppercase tracking-[0.18em] text-[#8a6e5f]">Starting price</p>
-            <p className="mt-1 text-2xl font-semibold tracking-[-0.03em] text-[#2b2927] sm:text-[26px]">₹{product.price}</p>
+            <p className="mt-1 text-2xl font-semibold tracking-[-0.03em] text-[#2b2927] sm:text-[26px]">PKR {product.price.toLocaleString("en-PK")}</p>
           </div>
           <a
             href={whatsappLink(`Hi, I want to ask about ${product.name}.`)}

@@ -64,7 +64,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
           <div className="flex items-center gap-3 rounded-[20px] border border-[#ecdcc7] bg-[#fffaf5] p-4">
             <div>
               <div className="text-[11px] uppercase tracking-[0.2em] text-[#817065]">Starting at</div>
-              <div className="mt-1 text-3xl font-semibold text-[#2d2724]">₹{resolvedProduct.price}</div>
+              <div className="mt-1 text-3xl font-semibold text-[#2d2724]">PKR {resolvedProduct.price.toLocaleString("en-PK")}</div>
             </div>
             <div className="ml-auto flex items-center gap-2 rounded-full bg-[#f2e5d9] px-3 py-1.5 text-sm text-[#5f4d45]">
               <Star size={14} className="fill-[#b8835c] text-[#b8835c]" />

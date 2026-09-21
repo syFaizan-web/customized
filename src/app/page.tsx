@@ -2,26 +2,20 @@ import Link from "next/link";
 import { ArrowRight, BrushCleaning, Gift, HeartHandshake, MessageCircleMore, Sparkles, Star, Wand2 } from "lucide-react";
 
 import { ProductCard } from "@/components/product-card";
-import { ImageWithFallback } from "@/components/image-with-fallback";
+import { InstagramGallery } from "@/components/instagram-gallery";
+import { FaqList } from "@/components/faq-list";
+import { HeroSection } from "@/components/hero-section";
+import { ScrollToHero } from "@/components/scroll-to-hero";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { bestsellers, categoryHighlights, faqItems, featuredProducts, newArrivals, whatsappLink } from "@/data/products";
 
 const benefits = [
-  { icon: Sparkles, title: "Handmade with care", description: "Every piece is thoughtfully crafted in small batches with attention to detail." },
-  { icon: Wand2, title: "Personalized for you", description: "Names, dates, initials, and custom details woven into each design." },
+  { icon: Sparkles, title: "Handmade with care", description: "Thoughtfully crafted in small batches with attention to detail." },
+  { icon: Wand2, title: "Personalized for you", description: "Names, dates, initials, and custom details in each design." },
   { icon: Gift, title: "Unique designs", description: "Made to feel personal, special, and distinctly yours." },
-  { icon: BrushCleaning, title: "Easy customization", description: "Share your preference and we’ll shape the final design together." },
-  { icon: HeartHandshake, title: "Direct WhatsApp support", description: "From the first idea to final confirmation, we stay in touch with you." },
-];
-
-const steps = [
-  "Choose a product",
-  "Tell us your customization requirements",
-  "Confirm design/details",
-  "Confirm price and order",
-  "Your personalized product is prepared",
-  "Delivery",
+  { icon: BrushCleaning, title: "Easy customization", description: "Share your preference and we’ll shape the design together." },
+  { icon: HeartHandshake, title: "Direct WhatsApp support", description: "We stay in touch from the first idea to final confirmation." },
 ];
 
 const galleryImages = [
@@ -29,7 +23,7 @@ const galleryImages = [
   "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=900&q=80",
   "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
   "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1521590832167-7e1c2d3d7f0d?auto=format&fit=crop&w=900&q=80",
+  "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
   "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
   "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
   "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80",
@@ -55,46 +49,7 @@ export default function Home() {
     <>
       <SiteHeader />
       <main>
-        <section className="relative overflow-hidden bg-[#f7f1ea]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(184,131,92,0.12),_transparent_40%)]" />
-          <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-20">
-            <div className="flex flex-col items-center justify-center text-center">
-              <p className="mb-5 text-[11px] uppercase tracking-[0.22em] text-[#7b6257]">Handmade customs for meaningful moments</p>
-              <h1 className="max-w-xl font-serif text-5xl leading-[1.02] text-[#2d2724] sm:text-6xl">
-                Made by hand. Made for you.
-              </h1>
-              <p className="mt-6 max-w-lg text-lg leading-8 text-[#5d4d46]">
-                Turn life’s most meaningful moments into beautifully personalized handmade pieces, thoughtfully designed for gifting, keepsakes, and everyday keepsakes.
-              </p>
-            </div>
-
-            <div className="flex items-center justify-center">
-              <div className="grid w-full max-w-xl gap-4 sm:grid-cols-2">
-                <div className="overflow-hidden rounded-[28px] border border-[#ead8c5] bg-[#fffaf6] p-3 shadow-[0_25px_60px_rgba(92,71,59,0.06)] sm:col-span-2">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"
-                    alt="Handmade personalized piece"
-                    className="h-[300px] w-full rounded-[20px] object-cover"
-                  />
-                </div>
-                <div className="overflow-hidden rounded-[24px] border border-[#ead8c5] bg-[#fffaf6] p-3">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80"
-                    alt="Custom frame"
-                    className="h-[210px] w-full rounded-[18px] object-cover"
-                  />
-                </div>
-                <div className="overflow-hidden rounded-[24px] border border-[#ead8c5] bg-[#fffaf6] p-3">
-                  <ImageWithFallback
-                    src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=800&q=80"
-                    alt="Handmade earrings"
-                    className="h-[210px] w-full rounded-[18px] object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <HeroSection />
 
         <section className="bg-[#f4ece5] py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -112,6 +67,24 @@ export default function Home() {
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="mb-6">
+            <p className="mb-2 text-[11px] uppercase tracking-[0.2em] text-[#7b6257]">Why choose us</p>
+            <h2 className="font-serif text-3xl text-[#2d2724] sm:text-4xl">Crafted with intention and personal care</h2>
+          </div>
+          <div className="grid grid-cols-2 gap-3 xl:grid-cols-5">
+            {benefits.map(({ icon: Icon, title, description }) => (
+              <div key={title} className="rounded-[20px] border border-[#eadcc7] bg-[#fffaf6] p-3 sm:p-4 lg:p-5">
+                <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-[#f2e5d9] text-[#b8835c] sm:mb-4 sm:h-11 sm:w-11">
+                  <Icon size={16} />
+                </div>
+                <h3 className="text-sm font-semibold leading-5 text-[#2d2724] sm:text-base">{title}</h3>
+                <p className="mt-1.5 text-xs leading-5 text-[#645750] sm:mt-2 sm:text-sm sm:leading-6">{description}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -140,44 +113,6 @@ export default function Home() {
                 </span>
               </Link>
             ))}
-          </div>
-        </section>
-
-        <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <p className="mb-3 text-[11px] uppercase tracking-[0.2em] text-[#7b6257]">Why choose us</p>
-            <h2 className="font-serif text-3xl text-[#2d2724] sm:text-4xl">Crafted with intention and personal care</h2>
-          </div>
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-5">
-            {benefits.map(({ icon: Icon, title, description }) => (
-              <div key={title} className="rounded-[24px] border border-[#eadcc7] bg-[#fffaf6] p-5">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-[#f2e5d9] text-[#b8835c]">
-                  <Icon size={18} />
-                </div>
-                <h3 className="text-lg font-semibold text-[#2d2724]">{title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[#645750]">{description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="bg-[#f5efe9] py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-8 max-w-2xl">
-              <p className="mb-3 text-[11px] uppercase tracking-[0.2em] text-[#7b6257]">How custom orders work</p>
-              <h2 className="font-serif text-3xl text-[#2d2724] sm:text-4xl">Simple, personal, and designed around your story</h2>
-            </div>
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {steps.map((step, index) => (
-                <div key={step} className="rounded-[24px] border border-[#eadcc7] bg-[#fffaf6] p-5">
-                  <div className="mb-4 flex items-center justify-between">
-                    <span className="text-[11px] uppercase tracking-[0.2em] text-[#856c5e]">Step {index + 1}</span>
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#f0dfcf] text-sm font-medium text-[#2d2724]">{index + 1}</span>
-                  </div>
-                  <p className="text-lg font-semibold text-[#2d2724]">{step}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
 
@@ -257,16 +192,7 @@ export default function Home() {
                 <h2 className="font-serif text-3xl text-[#2d2724] sm:text-4xl">Follow us on Instagram</h2>
               </div>
             </div>
-            <div className="grid auto-rows-[160px] grid-cols-2 gap-4 md:grid-cols-4">
-              {galleryImages.map((image, index) => (
-                <div
-                  key={image}
-                  className={`${index % 3 === 0 ? "md:row-span-2" : ""} overflow-hidden rounded-[24px] border border-[#ebdcc8] bg-white`}
-                >
-                  <ImageWithFallback src={image} alt="Gallery showcase" className="h-full w-full object-cover" />
-                </div>
-              ))}
-            </div>
+            <InstagramGallery images={galleryImages} />
           </div>
         </section>
 
@@ -295,16 +221,7 @@ export default function Home() {
             <p className="mb-3 text-[11px] uppercase tracking-[0.2em] text-[#7b6257]">FAQ preview</p>
             <h2 className="font-serif text-3xl text-[#2d2724] sm:text-4xl">Questions we get often</h2>
           </div>
-          <div className="space-y-3">
-            {faqItems.slice(0, 5).map((item) => (
-              <div key={item.question} className="rounded-[20px] border border-[#eadcc7] bg-[#fffaf6] px-5 py-4">
-                <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-base font-semibold text-[#2d2724]">{item.question}</h3>
-                  <ArrowRight size={16} className="text-[#7b6257]" />
-                </div>
-              </div>
-            ))}
-          </div>
+          <FaqList items={faqItems.slice(0, 5)} />
           <div className="mt-6">
             <Link href="/faq" className="inline-flex items-center gap-2 text-sm font-medium text-[#2d2724]">
               View all FAQs <ArrowRight size={15} />
@@ -331,6 +248,7 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <ScrollToHero />
       <SiteFooter />
     </>
   );

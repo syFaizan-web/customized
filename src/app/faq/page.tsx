@@ -1,6 +1,6 @@
-import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
+import { FaqList } from "@/components/faq-list";
 import { faqItems, whatsappLink } from "@/data/products";
 
 export default function FaqPage() {
@@ -11,17 +11,7 @@ export default function FaqPage() {
         <h1 className="font-serif text-4xl text-[#2d2724] sm:text-5xl">Frequently asked questions</h1>
       </section>
 
-      <div className="space-y-4">
-        {faqItems.map((item) => (
-          <div key={item.question} className="rounded-[24px] border border-[#eadcc7] bg-[#fffaf5] p-5 sm:p-6">
-            <div className="flex items-start justify-between gap-4">
-              <h2 className="text-lg font-semibold text-[#2d2724]">{item.question}</h2>
-              <ChevronRight size={18} className="mt-1 text-[#7b6257]" />
-            </div>
-            <p className="mt-3 max-w-3xl text-sm leading-7 text-[#5f4d45]">{item.answer}</p>
-          </div>
-        ))}
-      </div>
+      <FaqList items={faqItems} />
 
       <div className="mt-10 rounded-[30px] border border-[#e7d5c1] bg-[#f7f0ea] px-6 py-8 text-center">
         <h2 className="font-serif text-3xl text-[#2d2724]">Can’t find what you’re looking for?</h2>

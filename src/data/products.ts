@@ -27,6 +27,11 @@ export type Product = {
   newArrival?: boolean;
 };
 
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 export const categories = [
   "Cards",
   "Frames",
@@ -192,7 +197,7 @@ export const products: Product[] = [
       "An elegant wedding keepsake featuring initials and meaningful details, made to keep the celebration close long after the day ends.",
     shortDescription: "Wedding keepsake with monogram details and a timeless finish.",
     images: [
-      "https://images.unsplash.com/photo-1521590832167-7e1c2d3d7f0d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80",
     ],
@@ -267,7 +272,7 @@ export const products: Product[] = [
   },
 ];
 
-export const faqItems = [
+export const faqItems: FaqItem[] = [
   {
     question: "How do custom orders work?",
     answer: "Simply choose a product, share your customization details in WhatsApp, and we will confirm the design, materials, and price before production begins.",

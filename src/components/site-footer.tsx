@@ -42,9 +42,9 @@ export function SiteFooter() {
         <div>
           <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#5a463d]">Contact</h3>
           <ul className="space-y-3 text-sm text-[#62574f]">
-            <li className="flex items-center gap-2"><MapPin size={14} /> Jaipur, India</li>
+            <li className="flex items-center gap-2"><MapPin size={14} /> Pakistan</li>
             <li className="flex items-center gap-2"><Phone size={14} /> +91 98765 43210</li>
-            <li className="flex items-center gap-2"><Camera size={14} /> @faizstudiohandmade</li>
+            <li className="flex items-center gap-2"><Camera size={14} /> <a href="https://www.instagram.com/faizstudiohandmade/" target="_blank" rel="noreferrer" className="hover:text-[#2d2724]">@faizstudiohandmade</a></li>
           </ul>
         </div>
       </div>

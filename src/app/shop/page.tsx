@@ -98,9 +98,9 @@ export default function ShopPage() {
             className="w-full bg-transparent text-sm outline-none"
           >
             <option value="all">All prices</option>
-            <option value="under-1000">Under ₹1,000</option>
-            <option value="1000-2000">₹1,000 - ₹2,000</option>
-            <option value="2000-plus">₹2,000+</option>
+            <option value="under-1000">Under PKR 1,000</option>
+            <option value="1000-2000">PKR 1,000 - PKR 2,000</option>
+            <option value="2000-plus">PKR 2,000+</option>
           </select>
         </label>
 
