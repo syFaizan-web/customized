@@ -25,6 +25,8 @@ export function SiteFooter() {
           <ul className="space-y-3 text-sm text-[#62574f]">
             <li><Link href="/shop" className="hover:text-[#2d2724]">Shop</Link></li>
             <li><Link href="/faq" className="hover:text-[#2d2724]">FAQ</Link></li>
+            <li><Link href="/shipping" className="hover:text-[#2d2724]">Shipping info</Link></li>
+            <li><Link href="/returns" className="hover:text-[#2d2724]">Return policy</Link></li>
             <li><a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="hover:text-[#2d2724]">Customize</a></li>
           </ul>
         </div>

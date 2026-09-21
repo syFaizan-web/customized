@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BrushCleaning, Gift, HeartHandshake, MessageCircleMore, Sparkles, Star, Wand2 } from "lucide-react";
+import { ArrowRight, BrushCleaning, CreditCard, Gift, HeartHandshake, LockKeyhole, MessageCircleMore, Sparkles, Star, Wand2 } from "lucide-react";
 
 import { ProductCard } from "@/components/product-card";
 import { InstagramGallery } from "@/components/instagram-gallery";
@@ -16,6 +16,13 @@ const benefits = [
   { icon: Gift, title: "Unique designs", description: "Made to feel personal, special, and distinctly yours." },
   { icon: BrushCleaning, title: "Easy customization", description: "Share your preference and we’ll shape the design together." },
   { icon: HeartHandshake, title: "Direct WhatsApp support", description: "We stay in touch from the first idea to final confirmation." },
+];
+
+const paymentMethods = [
+  { name: "easypaisa", detail: "Mobile wallet", mark: "e", color: "bg-[#47b649] text-white" },
+  { name: "JazzCash", detail: "Mobile wallet", mark: "J", color: "bg-[#ed1c24] text-white" },
+  { name: "Meezan Bank", detail: "Bank transfer", mark: "M", color: "bg-[#087f42] text-white" },
+  { name: "Other banks", detail: "Direct transfer", mark: "↗", color: "bg-[#2d2724] text-white" },
 ];
 
 const galleryImages = [
@@ -116,6 +123,40 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="bg-[#f5efe9] py-12 sm:py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="overflow-hidden rounded-[30px] border border-[#eadcc7] bg-[#fffaf6] shadow-[0_18px_45px_rgba(89,68,55,0.06)]">
+              <div className="grid gap-8 px-5 py-7 sm:px-8 sm:py-9 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:px-10">
+                <div>
+                  <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#f2e5d9] text-[#b8835c]">
+                    <CreditCard size={18} />
+                  </div>
+                  <p className="mb-2 text-[11px] uppercase tracking-[0.2em] text-[#7b6257]">Simple checkout</p>
+                  <h2 className="font-serif text-3xl text-[#2d2724] sm:text-4xl">Pay your way, with confidence</h2>
+                  <p className="mt-3 max-w-lg text-sm leading-6 text-[#5f4d45]">
+                    Payment details are confirmed with you before production. Choose from the available options shared during order confirmation.
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                  {paymentMethods.map((method) => (
+                    <div key={method.name} className="rounded-[20px] border border-[#eadcc7] bg-white p-3 text-center transition hover:-translate-y-1 hover:shadow-[0_10px_24px_rgba(89,68,55,0.08)]">
+                      <div className={`mx-auto flex h-12 w-12 items-center justify-center rounded-2xl text-2xl font-bold shadow-sm ${method.color}`}>
+                        {method.mark}
+                      </div>
+                      <p className="mt-3 text-sm font-semibold text-[#2d2724]">{method.name}</p>
+                      <p className="mt-1 text-[10px] uppercase tracking-[0.12em] text-[#88756c]">{method.detail}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="flex items-center gap-2 border-t border-[#eadcc7] bg-[#f7f0ea] px-5 py-3 text-xs text-[#6a5850] sm:px-8">
+                <LockKeyhole size={14} className="shrink-0 text-[#b8835c]" />
+                Payment instructions are shared only through our official order conversation.
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="rounded-[32px] border border-[#eadcc7] bg-[#f6efe8] px-6 py-10 sm:px-8 lg:px-10">
             <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
@@ -198,8 +239,9 @@ export default function Home() {
 
         <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <p className="mb-3 text-[11px] uppercase tracking-[0.2em] text-[#7b6257]">Testimonials</p>
-            <h2 className="font-serif text-3xl text-[#2d2724] sm:text-4xl">Loved by our customers</h2>
+            <p className="mb-3 text-[11px] uppercase tracking-[0.2em] text-[#7b6257]">Social proof</p>
+            <h2 className="font-serif text-3xl text-[#2d2724] sm:text-4xl">Thoughtful pieces, meaningful experiences</h2>
+            <p className="mt-3 max-w-2xl text-base leading-7 text-[#5f4d45]">A few words from customers who made their moments personal with a custom piece.</p>
           </div>
           <div className="grid gap-5 lg:grid-cols-3">
             {testimonials.map((testimonial) => (

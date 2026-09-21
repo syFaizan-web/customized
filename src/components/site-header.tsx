@@ -8,6 +8,8 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/shop", label: "Shop" },
   { href: "/faq", label: "FAQ" },
+  { href: "/shipping", label: "Shipping" },
+  { href: "/returns", label: "Returns" },
 ];
 
 export function SiteHeader() {
